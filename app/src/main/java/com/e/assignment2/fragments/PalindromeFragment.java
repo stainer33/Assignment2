@@ -42,7 +42,7 @@ Button check;
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int n, r,q,temp,sum=0;
+                int n, r,temp,sum=0;
 
                         n= Integer.parseInt( input.getText().toString());
                 temp=n;
