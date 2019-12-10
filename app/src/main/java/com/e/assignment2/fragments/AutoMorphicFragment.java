@@ -43,17 +43,17 @@ public class AutoMorphicFragment extends Fragment {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num1 = Integer.parseInt(input.getText().toString())%10;
+                String num1 = (input.getText().toString());
                 int square = Integer.parseInt(input.getText().toString())*Integer.parseInt(input.getText().toString());
-                int num2 =square%10;
-               if( num1==num2)
-               {
-                   result.setText(input.getText().toString() +" is automorphic");
-               }
-               else
-               {
-                   result.setText(input.getText().toString() +" is not automorphic");
-               }
+                String sq =square+"";
+                if(sq.endsWith(num1))
+                {
+                    result.setText(input.getText().toString() +" is automorphic");
+                }
+                else
+                {
+                    result.setText(input.getText().toString() +" is not automorphic");
+                }
             }
         });
         return view;
