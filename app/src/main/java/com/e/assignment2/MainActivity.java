@@ -10,11 +10,13 @@ import android.widget.Button;
 
 import com.e.assignment2.fragments.AreaFragment;
 import com.e.assignment2.fragments.ArmstrongFragment;
+import com.e.assignment2.fragments.AutoMorphicFragment;
 import com.e.assignment2.fragments.PalindromeFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-Button area, automorphing, armstrong, palindrome,SI,swapping;
+    Button area, automorphic, armstrong, palindrome, SI, swapping;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +24,14 @@ Button area, automorphing, armstrong, palindrome,SI,swapping;
 
 
         area = findViewById(R.id.area);
-        automorphing=findViewById(R.id.automorphing);
-        armstrong=findViewById(R.id.Armstrong);
-        palindrome=findViewById(R.id.palindrome);
-        SI=findViewById(R.id.SI);
-        swapping=findViewById(R.id.swapping);
+        automorphic = findViewById(R.id.automorphic);
+        armstrong = findViewById(R.id.Armstrong);
+        palindrome = findViewById(R.id.palindrome);
+        SI = findViewById(R.id.SI);
+        swapping = findViewById(R.id.swapping);
 
         area.setOnClickListener(this);
-        automorphing.setOnClickListener(this);
+        automorphic.setOnClickListener(this);
         armstrong.setOnClickListener(this);
         palindrome.setOnClickListener(this);
         SI.setOnClickListener(this);
@@ -38,25 +40,33 @@ Button area, automorphing, armstrong, palindrome,SI,swapping;
 
     @Override
     public void onClick(View v) {
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.area:
-                AreaFragment areaFragment=new AreaFragment();
-                fragmentTransaction.replace(R.id.fragContainer,areaFragment);
+                AreaFragment areaFragment = new AreaFragment();
+                fragmentTransaction.replace(R.id.fragContainer, areaFragment);
                 fragmentTransaction.commit();
+                break;
 
-            case R.id.palindrome:
-                PalindromeFragment palindromeFragment=new PalindromeFragment();
-                fragmentTransaction.replace(R.id.fragContainer,palindromeFragment);
+          case R.id.palindrome:
+                PalindromeFragment palindromeFragment = new PalindromeFragment();
+                fragmentTransaction.replace(R.id.fragContainer, palindromeFragment);
                 fragmentTransaction.commit();
+                break;
 
             case R.id.Armstrong:
-                ArmstrongFragment armstrongFragment =new ArmstrongFragment();
-                fragmentTransaction.replace(R.id.fragContainer,armstrongFragment);
+                ArmstrongFragment armstrongFragment = new ArmstrongFragment();
+                fragmentTransaction.replace(R.id.fragContainer, armstrongFragment);
                 fragmentTransaction.commit();
+                break;
+
+            case R.id.automorphic:
+                AutoMorphicFragment autoMorphicFragment=new AutoMorphicFragment();
+                fragmentTransaction.replace(R.id.fragContainer,autoMorphicFragment);
+                fragmentTransaction.commit();
+                break;
 
         }
     }

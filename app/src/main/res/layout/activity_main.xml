@@ -39,8 +39,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/automorphing"
-        android:text="Automorphing"
+        android:id="@+id/automorphic"
+        android:text="Automorphic"
         android:textSize="17sp"></Button>
     <Button
         android:layout_width="wrap_content"

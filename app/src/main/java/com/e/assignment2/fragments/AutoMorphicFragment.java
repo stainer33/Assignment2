@@ -17,12 +17,13 @@ import com.e.assignment2.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ArmstrongFragment extends Fragment {
+public class AutoMorphicFragment extends Fragment {
 
 
-    public ArmstrongFragment() {
+    public AutoMorphicFragment() {
         // Required empty public constructor
     }
+
 
     Button check;
     TextView result;
@@ -32,7 +33,8 @@ public class ArmstrongFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_armstrong, container, false);
+        View view =inflater.inflate(R.layout.fragment_auto_morphic, container, false);
+
 
         check = view.findViewById(R.id.btnCheck);
         result = view.findViewById(R.id.result);
@@ -41,33 +43,19 @@ public class ArmstrongFragment extends Fragment {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int n, r,temp,count=0,sum=0;
-
-
-                n= Integer.parseInt( input.getText().toString());
-                temp=n;
-
-                while(n>0)
-                {
-                    n=n/10;
-                    count=count+1;
-                }
-
-
-               while(temp>0 ) {
-                    r = temp % 10;
-                    //sum = sum +(r*r*r);
-                   sum = (int) (sum +(Math.pow(r,count)));
-                    temp=temp/10;
-                }
-
-                if(sum==Integer.parseInt( input.getText().toString()))
-                {result.setText(input.getText().toString()+" is armstrong");}
-                else
-                {result.setText(input.getText().toString()+" is not armstrong");}
+                int num1 = Integer.parseInt(input.getText().toString())%10;
+                int square = Integer.parseInt(input.getText().toString())*Integer.parseInt(input.getText().toString());
+                int num2 =square%10;
+               if( num1==num2)
+               {
+                   result.setText(input.getText().toString() +" is automorphic");
+               }
+               else
+               {
+                   result.setText(input.getText().toString() +" is not automorphic");
+               }
             }
         });
-
         return view;
     }
 
