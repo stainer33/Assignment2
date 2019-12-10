@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/fragContainer"
+    android:orientation="vertical">
 <GridLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -25,19 +27,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Armstrong"
+        android:textSize="17sp"
         android:id="@+id/Armstrong"></Button>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SI"></Button>
+        android:id="@+id/SI"
+        android:text="Interest"
+        android:textSize="17sp"></Button>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/automorphing"></Button>
+        android:id="@+id/automorphing"
+        android:text="Automorphing"
+        android:textSize="17sp"></Button>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/swapping"></Button>
+        android:id="@+id/swapping"
+        android:text="Swapping"
+        android:textSize="17sp"></Button>
 </GridLayout>
 
 
