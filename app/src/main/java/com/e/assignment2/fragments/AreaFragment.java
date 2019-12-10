@@ -17,7 +17,7 @@ import com.e.assignment2.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AreaFragment extends Fragment {
+public class AreaFragment extends Fragment  {
 
 
     public AreaFragment() {
@@ -35,9 +35,17 @@ public class AreaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_area, container, false);
 
         btnCal=view.findViewById(R.id.btnCal);
-        btnCal=view.findViewById(R.id.btnCal);
         radius=view.findViewById(R.id.radius);
         result=view.findViewById(R.id.result);
+
+        btnCal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int r = Integer.parseInt(radius.getText().toString());
+                int res = (22*r*r)/7;
+                result.setText(res+"");
+            }
+        });
         return view;
 
     }

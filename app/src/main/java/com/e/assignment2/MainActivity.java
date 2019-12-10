@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.e.assignment2.fragments.AreaFragment;
+import com.e.assignment2.fragments.PalindromeFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,6 +45,11 @@ Button area, automorphing, armstrong, palindrome,SI,swapping;
             case R.id.area:
                 AreaFragment areaFragment=new AreaFragment();
                 fragmentTransaction.replace(R.id.fragContainer,areaFragment);
+                fragmentTransaction.commit();
+
+            case R.id.palindrome:
+                PalindromeFragment palindromeFragment=new PalindromeFragment();
+                fragmentTransaction.replace(R.id.fragContainer,palindromeFragment);
                 fragmentTransaction.commit();
 
         }
