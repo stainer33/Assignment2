@@ -12,6 +12,7 @@ import com.e.assignment2.fragments.AreaFragment;
 import com.e.assignment2.fragments.ArmstrongFragment;
 import com.e.assignment2.fragments.AutoMorphicFragment;
 import com.e.assignment2.fragments.PalindromeFragment;
+import com.e.assignment2.fragments.SwappingFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,6 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.automorphic:
                 AutoMorphicFragment autoMorphicFragment=new AutoMorphicFragment();
                 fragmentTransaction.replace(R.id.fragContainer,autoMorphicFragment);
+                fragmentTransaction.commit();
+                break;
+
+            case R.id.swapping:
+                SwappingFragment swappingFragment =new SwappingFragment();
+                fragmentTransaction.replace(R.id.fragContainer,swappingFragment);
                 fragmentTransaction.commit();
                 break;
 

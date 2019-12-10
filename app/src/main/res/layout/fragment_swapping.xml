@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SwappingFragment">
+    tools:context=".fragments.PalindromeFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swap the numbers"
+        android:textSize="25sp"></TextView>
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:hint="Enter the first number"
+        android:layout_margin="10sp"
+        android:id="@+id/num1"
+        android:inputType="number"></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:hint="Enter the second number"
+        android:layout_margin="10sp"
+        android:id="@+id/num2"
+        android:inputType="number"></EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Swap"
+        android:layout_gravity="center"
+        android:id="@+id/btnSwap"></Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:id="@+id/result"></TextView>
 
-</FrameLayout>
+</LinearLayout>
