@@ -49,8 +49,18 @@ public class SwappingFragment extends Fragment {
                 second = first + second;
                 first = second - first;
 
-                result.setText("Before Swap: 1st number= "+num1.getText().toString()+" 2nd number= "+num2.getText().toString()+"\n");
-                result.setText("Before Swap: 1st number= "+first+" 2nd number= "+second);
+                result.append("Before Swap: 1st number= "+num1.getText().toString()+" 2nd number= "+num2.getText().toString()+"\n");
+                result.append("After Swap: 1st number= "+first+" 2nd number= "+second+"\n");
+
+
+            }
+        });
+        num1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num1.setText("");
+                num2.setText("");
+                result.setText("");
 
             }
         });

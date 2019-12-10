@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.e.assignment2.fragments.AreaFragment;
 import com.e.assignment2.fragments.ArmstrongFragment;
 import com.e.assignment2.fragments.AutoMorphicFragment;
+import com.e.assignment2.fragments.InterestFragment;
 import com.e.assignment2.fragments.PalindromeFragment;
 import com.e.assignment2.fragments.SwappingFragment;
 
@@ -74,7 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.replace(R.id.fragContainer,swappingFragment);
                 fragmentTransaction.commit();
                 break;
-
+            case R.id.SI:
+                InterestFragment interestFragment=new InterestFragment();
+                fragmentTransaction.replace(R.id.fragContainer,interestFragment);
+                fragmentTransaction.commit();
+                break;
         }
     }
 }

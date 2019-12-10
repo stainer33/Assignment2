@@ -3,41 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PalindromeFragment"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Swap the numbers"
+        android:text="Calculate simple Interest"
         android:textSize="25sp"></TextView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
-        android:hint="Enter the first number"
+        android:hint="Enter the prinicple"
         android:layout_margin="10sp"
-        android:id="@+id/num1"
+        android:id="@+id/principle"
         android:inputType="number"></EditText>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
-        android:hint="Enter the second number"
+        android:hint="Enter the rate"
         android:layout_margin="10sp"
-        android:id="@+id/num2"
+        android:id="@+id/rate"
+        android:inputType="number"></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:hint="Enter the time in year"
+        android:layout_margin="10sp"
+        android:id="@+id/time"
         android:inputType="number"></EditText>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Swap"
+        android:text="Calculate"
         android:layout_gravity="center"
-        android:id="@+id/btnSwap"></Button>
+        android:id="@+id/btnCal"></Button>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_gravity="center"
         android:id="@+id/result"></TextView>
 
